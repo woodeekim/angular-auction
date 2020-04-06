@@ -1,0 +1,18 @@
+.title {
+  background-color: darkorange;
+  color: white;
+}
+
+h1,h2 {
+  margin: 20px 40px;
+  font-size: 50px;
+}
+
+/*여기서 바로 selecter를 불러서 css 를 적용 할 수도 있다.*/
+app-todo {
+  border-bottom: 1px solid #cccccc;
+}
+
+app-add-todo {
+  border-bottom: 1px solid red;
+}

@@ -6,8 +6,15 @@ import {Todo} from './share/todo.model';
   template: `
     <input type="checkbox"  [checked]="todo.done">{{todo.text}}
   `,
-  styles: [
-  ],
+  styles: [`
+  host {
+    display: block;
+    padding: 16px;
+    background-color: white;
+    color: darkgray;
+   }
+
+  `]
 })
 export class TodoComponent implements OnInit {
   @Input() todo: Todo;
