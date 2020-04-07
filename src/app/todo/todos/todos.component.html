@@ -1,6 +1,7 @@
 <div class="title">
   <h1>나의 하루</h1>
-  <h2>4월 5일</h2>
+  <!--date 파이프 적용-->
+  <h2>{{ today | date:'M월 d일'}}</h2>
 </div>
 <div>
   <!--ngFor는 지시자다.-->
@@ -8,10 +9,11 @@
     <app-todo [todo]="todo "></app-todo>
   </div>
 </div>
-
 <div>
   <app-add-todo (onTodoAdd)="addTodo($event)"></app-add-todo>
 </div>
+<!--object 안에 값들을 보고 싶을 때 json 파이프 이용-->
+{{ todos | json}}
 
 
 

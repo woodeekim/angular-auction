@@ -8,7 +8,8 @@ import {Todo} from './todo/share/todo.model';
 })
 export class TodosComponent implements OnInit {
   newText = '';
-  todos: Todo[] ;
+  todos: Todo[];
+  today: Date = new Date();
 
   constructor() {
     this.todos = [
