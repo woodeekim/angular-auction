@@ -40,3 +40,17 @@ ng generate module todo
 # 다양한 파이프를 앵귤러가 기본적으로 제공하며 커스터 마이징한 파이프도 만들 수 있다.
 ```
 
+생각 정리
+```bash
+ 지금까지 이해한 내용을 토대로 정리하자면 
+- angular.json 의 빌드 지정을 main.ts 로 했기 때문에 main.ts 부터 시작
+- 루트 모듈인 AppModule -> bootstap 으로 지정한 AppComponent 로 흐름
+- component의 클래스는 exfort class 로 선언하기 때문에 다른곳에서 import 한 클래스의 변수이름으로 사용 가능
+- @Component 어노테이션의 selector는 html 에서 요소로 사용
+- 이후 todo라는 모듈을 통해 todo 에 필요한 각각의 컴포넌트를 todo.modules.ts 에 설정
+- todo.modules.ts 에서도 todosComponent를 대표 컴포넌트로 지정하고 todosComponent 안에 여러개의 컴포넌트로 구성
+- 결국 app.component.html 에서는 todo-app 이라는 하나의 컴포넌트를 사용
+
+```
+
+
