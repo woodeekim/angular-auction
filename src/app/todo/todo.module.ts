@@ -7,12 +7,11 @@ import { AddTodoComponent } from './todos/add-todo/add-todo.component';
 import { GreetingComponent } from './greeting/greeting.component';
 import { LogDirectiveDirective } from './greeting/directive/log-directive.directive';
 import { HighlightDirectiveDirective } from './greeting/background/highlight-directive.directive';
-import { BindingComponent } from './greeting/binding/binding.component';
 
 
 
 @NgModule({
-  declarations: [TodosComponent, TodoComponent, AddTodoComponent, GreetingComponent, LogDirectiveDirective, HighlightDirectiveDirective, BindingComponent],
+  declarations: [TodosComponent, TodoComponent, AddTodoComponent, GreetingComponent, LogDirectiveDirective, HighlightDirectiveDirective],
   imports: [
     CommonModule,
     FormsModule

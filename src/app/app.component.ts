@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '이렇게 바꾸면 되나 ?';
+  name: string;
+  constructor() {
+    this.name = 'Angular';
+  }
 }
