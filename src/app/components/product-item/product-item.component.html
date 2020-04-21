@@ -1,1 +1,18 @@
-<p>product-item works!</p>
+<div class="thumbnail">
+  <img src="http://placehold.it/320x150">
+  <div class="caption">
+    <h4 class="pull-right">{{product.price}}</h4>
+    <h4><a>{{ product.title}}</a></h4>
+    <p>{{product.description}}</p>
+  </div>
+  <div>
+    <app-stars [rating]="product.rating"></app-stars>
+  </div>
+</div>
+
+<!--
+{{}}
+- 데이터 표현식 중 하나로 이중 중괄호 표현식이라고 부른다.
+- 이중 중괄호로 둘러싸인 표현식은 실행 결과가 문자열로 변환디어 템플릿의 표현식 자리에 치환된다.
+- 문자열이 템플릿의 표현식을 대체하는 과정을 문자열 삽입이라고 한다.
+-->

@@ -1,1 +1,7 @@
-<p>stars works!</p>
+<p>
+  <span *ngFor="let star of stars"
+        class="starrating 여기에100쪽 추가해야함, 아마 shim.min.js 이나 어떤거 불러와야한다."
+        [class.glyphicon-star-empty]="star">
+  </span>
+  <span> {{rating}} stars</span>
+</p>

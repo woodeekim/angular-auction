@@ -3,15 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {TodoModule} from './todo/todo.module';
+import { TodoModule} from './todo/todo.module';
 import { ApplicationComponent } from './components/application/application.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { ProductItemComponent } from './components/product-item/product-item.component';
-import { SearchComponent } from './components/search/search.component';
-import { StarsComponent } from './components/stars/stars.component';
+import CarouselComponent from './components/carousel/carousel.component';
+import FooterComponent from './components/footer/footer.component';
+import NavbarComponent from './components/navbar/navbar.component';
+import ProductItemComponent from './components/product-item/product-item.component';
+import SearchComponent from './components/search/search.component';
+import StarsComponent from './components/stars/stars.component';
+import { ProductService } from  './services/product.service';
 
+/*
+* bootstrap: AppComponent -> ApplicationComponent 변경
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,8 @@ import { StarsComponent } from './components/stars/stars.component';
     AppRoutingModule,
     TodoModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ProductService],
+  bootstrap: [ApplicationComponent]
 })
+
 export class AppModule { }
