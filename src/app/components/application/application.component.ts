@@ -11,7 +11,7 @@ import { Product, ProductService} from '../../services/product.service';
   styleUrls: ['./application.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ApplicationComponent implements OnInit {
+export default class ApplicationComponent implements OnInit {
   products: Array<Product> = [];
 
   constructor(private productService: ProductService) {

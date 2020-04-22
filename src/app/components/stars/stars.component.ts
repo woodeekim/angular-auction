@@ -11,7 +11,7 @@ import {Component, Input, OnInit} from '@angular/core';
   templateUrl: './stars.component.html',
   styleUrls: ['./stars.component.scss']
 })
-export default class StarsComponent implements OnInit {
+export class StarsComponent implements OnInit {
   @Input() count = 5;
   @Input() rating = 0;
   stars: boolean[] = [];
