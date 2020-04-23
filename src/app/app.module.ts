@@ -12,6 +12,9 @@ import ProductItemComponent from './components/product-item/product-item.compone
 import SearchComponent from './components/search/search.component';
 import {StarsComponent} from './components/stars/stars.component';
 import { ProductService } from  './services/product.service';
+import { HomeComponent } from './router-sample/home/home.component';
+import { ProductComponent } from './router-sample/product/product.component';
+import { RouterComponent} from './router-sample/router.component';
 
 
 /*
@@ -27,7 +30,10 @@ import { ProductService } from  './services/product.service';
     NavbarComponent,
     ProductItemComponent,
     SearchComponent,
-    StarsComponent
+    StarsComponent,
+    HomeComponent,
+    ProductComponent,
+    RouterComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,7 @@ import { ProductService } from  './services/product.service';
     TodoModule
   ],
   providers: [ProductService],
-  bootstrap: [ApplicationComponent]
+  bootstrap: [AppComponent]
 })
 
 export class AppModule { }

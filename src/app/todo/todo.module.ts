@@ -16,6 +16,6 @@ import { HighlightDirectiveDirective } from './greeting/background/highlight-dir
     CommonModule,
     FormsModule
   ],
-  exports: [TodosComponent, GreetingComponent]
+    exports: [TodosComponent, GreetingComponent, TodoComponent]
 })
 export class TodoModule { }
