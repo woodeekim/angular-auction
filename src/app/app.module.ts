@@ -4,17 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoModule} from './todo/todo.module';
-import ApplicationComponent from './components/application/application.component';
-import CarouselComponent from './components/carousel/carousel.component';
-import FooterComponent from './components/footer/footer.component';
-import NavbarComponent from './components/navbar/navbar.component';
-import ProductItemComponent from './components/product-item/product-item.component';
-import SearchComponent from './components/search/search.component';
-import {StarsComponent} from './components/stars/stars.component';
+import { ApplicationComponent } from './components/application/application.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProductItemComponent} from './components/product-item/product-item.component';
+import { SearchComponent} from './components/search/search.component';
+import { StarsComponent } from './components/stars/stars.component';
 import { ProductService } from  './services/product.service';
 import { HomeComponent } from './router-sample/home/home.component';
 import { ProductComponent } from './router-sample/product/product.component';
 import { RouterComponent} from './router-sample/router.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ProductParamComponent } from './router-sample/product-param/product-param.component';
+import { ProductParamDataComponent } from './router-sample/product-param-data/product-param-data.component';
 
 
 /*
@@ -33,14 +36,16 @@ import { RouterComponent} from './router-sample/router.component';
     StarsComponent,
     HomeComponent,
     ProductComponent,
-    RouterComponent
+    RouterComponent,
+    ProductParamComponent,
+    ProductParamDataComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule
+    TodoModule,
   ],
-  providers: [ProductService],
+  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 

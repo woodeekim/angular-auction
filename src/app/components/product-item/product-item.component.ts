@@ -7,7 +7,7 @@ import {Product} from '../../services/product.service';
   templateUrl: './product-item.component.html',
   styleUrls: ['./product-item.component.scss']
 })
-export default class ProductItemComponent implements OnInit {
+export class ProductItemComponent implements OnInit {
   @Input() product: Product;
 
   constructor() { }

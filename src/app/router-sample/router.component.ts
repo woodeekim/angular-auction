@@ -4,7 +4,7 @@ import { Component, OnInit} from '@angular/core';
   selector : 'app-router',
   template : `
     <a [routerLink]="['/']">Home</a>
-    <a [routerLink]="['/product']">Product Details</a>
+    <a [routerLink]="['/product',1234]">Product Details</a>
     <router-outlet></router-outlet>
   `
 })
