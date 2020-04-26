@@ -16,7 +16,7 @@ export class ProductParamComponent implements OnInit {
   productId: string;
 
   constructor(route: ActivatedRoute) {
-    this.productId = route.snapshot.params['id'];
+    this.productId = route.snapshot.params.id;
   }
 
   ngOnInit(): void {

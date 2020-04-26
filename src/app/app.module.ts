@@ -18,6 +18,9 @@ import { RouterComponent} from './router-sample/router.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ProductParamComponent } from './router-sample/product-param/product-param.component';
 import { ProductParamDataComponent } from './router-sample/product-param-data/product-param-data.component';
+import { ProductChildComponent } from './router-sample/product-child/product-child.component';
+import { SellerComponent } from './router-sample/seller/seller.component';
+import { ProductDescriptionComponent } from './router-sample/product-description/product-description.component';
 
 
 /*
@@ -39,6 +42,9 @@ import { ProductParamDataComponent } from './router-sample/product-param-data/pr
     RouterComponent,
     ProductParamComponent,
     ProductParamDataComponent,
+    ProductChildComponent,
+    SellerComponent,
+    ProductDescriptionComponent,
   ],
   imports: [
     BrowserModule,
