@@ -21,6 +21,8 @@ import { ProductParamDataComponent } from './router-sample/product-param-data/pr
 import { ProductChildComponent } from './router-sample/product-child/product-child.component';
 import { SellerComponent } from './router-sample/seller/seller.component';
 import { ProductDescriptionComponent } from './router-sample/product-description/product-description.component';
+import {LoginGuards} from './router-sample/guards/login-guards';
+import {UnsavedChangesGuards} from './router-sample/guards/unsaved_changes-guards';
 
 
 /*
@@ -51,7 +53,7 @@ import { ProductDescriptionComponent } from './router-sample/product-description
     AppRoutingModule,
     TodoModule,
   ],
-  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }, LoginGuards, UnsavedChangesGuards],
   bootstrap: [AppComponent]
 })
 

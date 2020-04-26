@@ -6,6 +6,9 @@ import { ProductChildComponent } from './router-sample/product-child/product-chi
 import { ProductDescriptionComponent } from './router-sample/product-description/product-description.component';
 import { SellerComponent } from './router-sample/seller/seller.component';
 import {RouterSampleRoutingModule} from './router-sample/router-sample-routing/router-sample-routing.module';
+import {ProductItemComponent} from './components/product-item/product-item.component';
+import {LoginGuards} from './router-sample/guards/login-guards';
+import {UnsavedChangesGuards} from './router-sample/guards/unsaved_changes-guards';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -13,7 +16,7 @@ const routes: Routes = [
     children: [
       { path: '', component: ProductDescriptionComponent},
       { path: 'seller/:id', component: SellerComponent }
-    ]}
+    ], canActivate: [LoginGuards], canDeactivate: [UnsavedChangesGuards]}
 ];
 
 @NgModule({
