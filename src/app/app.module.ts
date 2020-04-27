@@ -23,7 +23,9 @@ import { SellerComponent } from './router-sample/seller/seller.component';
 import { ProductDescriptionComponent } from './router-sample/product-description/product-description.component';
 import {LoginGuards} from './router-sample/guards/login-guards';
 import {UnsavedChangesGuards} from './router-sample/guards/unsaved_changes-guards';
-
+import { HomeChatComponent } from './chat/components/home-chat/home-chat.component';
+import { ChatPageComponent } from './chat/components/chat-page/chat-page.component';
+import { MainChatComponent } from './chat/main_chat.component';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -47,14 +49,17 @@ import {UnsavedChangesGuards} from './router-sample/guards/unsaved_changes-guard
     ProductChildComponent,
     SellerComponent,
     ProductDescriptionComponent,
+    HomeChatComponent,
+    ChatPageComponent,
+    MainChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule,
+    TodoModule
   ],
-  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }, LoginGuards, UnsavedChangesGuards],
-  bootstrap: [AppComponent]
+  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }, LoginGuards, UnsavedChangesGuards, MainChatComponent, HomeChatComponent, ChatPageComponent],
+  bootstrap: [MainChatComponent]
 })
 
 export class AppModule { }

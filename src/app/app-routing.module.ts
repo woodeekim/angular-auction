@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './router-sample/home/home.component';
-import { ProductComponent } from './router-sample/product/product.component';
 import { ProductChildComponent } from './router-sample/product-child/product-child.component';
 import { ProductDescriptionComponent } from './router-sample/product-description/product-description.component';
 import { SellerComponent } from './router-sample/seller/seller.component';
-import {RouterSampleRoutingModule} from './router-sample/router-sample-routing/router-sample-routing.module';
-import {ProductItemComponent} from './components/product-item/product-item.component';
 import {LoginGuards} from './router-sample/guards/login-guards';
 import {UnsavedChangesGuards} from './router-sample/guards/unsaved_changes-guards';
+import { HomeChatComponent } from './chat/components/home-chat/home-chat.component';
+import { ChatPageComponent } from './chat/components/chat-page/chat-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -19,8 +18,14 @@ const routes: Routes = [
     ], canActivate: [LoginGuards], canDeactivate: [UnsavedChangesGuards]}
 ];
 
+const routesChat: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeChatComponent },
+  { path: 'chat', component: ChatPageComponent, outlet: 'aux'}
+];
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routesChat)],
 
   exports: [RouterModule]
 })
