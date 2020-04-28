@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterSampleRoutingModule } from './router-sample/router-sample-routing/router-sample-routing.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,10 +57,11 @@ import { MainChatComponent } from './chat/main_chat.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule
+    TodoModule,
+    RouterSampleRoutingModule
   ],
   providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }, LoginGuards, UnsavedChangesGuards, MainChatComponent, HomeChatComponent, ChatPageComponent],
-  bootstrap: [MainChatComponent]
+  bootstrap: [AppComponent]
 })
 
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LuxuryModule } from './chat/components/luxury/luxury.module';
+
 import { HomeComponent } from './router-sample/home/home.component';
 import { ProductChildComponent } from './router-sample/product-child/product-child.component';
 import { ProductDescriptionComponent } from './router-sample/product-description/product-description.component';
@@ -24,8 +26,14 @@ const routesChat: Routes = [
   { path: 'chat', component: ChatPageComponent, outlet: 'aux'}
 ];
 
+/*
+* - 루트 라우팅 모듈에다가 기능모듈을 추가한다.
+* - 여기서 기능모듈은 LuxuryModule
+*   - LuxuryModule 은 CommonModule 로 설정
+*/
+
 @NgModule({
-  imports: [RouterModule.forRoot(routesChat)],
+  imports: [RouterModule.forRoot(routes), LuxuryModule],
 
   exports: [RouterModule]
 })

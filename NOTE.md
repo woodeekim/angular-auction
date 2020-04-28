@@ -68,6 +68,14 @@ ng generate module todo
   bootstrap 프로퍼티로 지정된 AppComponent가 루트 컴포넌트로 렌더링된다.
 - 그래서 처음에 index.html 에 <app-root> 요소로 들어가보면 루트 컴포넌트인
   app.component.ts 에서 @Component 어노테이션의 selector 로 'app-root' 로 되어있는 걸 볼 수 있다.
+
+#2020-04-28 정리
+- 모듈 단위로 앱을 나눌 때 여러개의 라우팅으로 나누면 된다. 
+    - Angular 애플리케이션은 특정 기능을 제공하는 모듈을 불러와서 구성한다.
+    - 개발자가 만든 애플리케이션의 루트모듈과 기능모듈로 나눌 수 있다.
+    - 루트 모듈은 개발자가 만들고 애플리케이션으로 부트스트랩하는 대상이다.
+    - 기능 모듈은 이미 구현된 모듈을 불러와서 수정하지 않고 그대로 사용한다.
+        - 예를 들어 [BrowerModule, RouterModule] 은 기능 모듈에 속한다.
 ```
 모듈(NgModule)
 ```bash
