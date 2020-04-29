@@ -11,14 +11,7 @@ import {UnsavedChangesGuards} from './router-sample/guards/unsaved_changes-guard
 import { HomeChatComponent } from './chat/components/home-chat/home-chat.component';
 import { ChatPageComponent } from './chat/components/chat-page/chat-page.component';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'product/:id', component: ProductChildComponent,
-    children: [
-      { path: '', component: ProductDescriptionComponent},
-      { path: 'seller/:id', component: SellerComponent }
-    ], canActivate: [LoginGuards], canDeactivate: [UnsavedChangesGuards]}
-];
+
 
 const routesChat: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -33,7 +26,14 @@ const routesChat: Routes = [
 */
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), LuxuryModule],
+  imports: [RouterModule.forRoot([
+    { path: '', component: HomeComponent},
+    { path: 'product/:id', component: ProductChildComponent,
+      children: [
+        { path: '', component: ProductDescriptionComponent},
+        { path: 'seller/:id', component: SellerComponent }
+      ], canActivate: [LoginGuards], canDeactivate: [UnsavedChangesGuards]},
+  ]), LuxuryModule],
 
   exports: [RouterModule]
 })

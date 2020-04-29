@@ -27,6 +27,8 @@ import {UnsavedChangesGuards} from './router-sample/guards/unsaved_changes-guard
 import { HomeChatComponent } from './chat/components/home-chat/home-chat.component';
 import { ChatPageComponent } from './chat/components/chat-page/chat-page.component';
 import { MainChatComponent } from './chat/main_chat.component';
+import {LuxuryModule} from './chat/components/luxury/luxury.module';
+import {LuxuryComponent} from './chat/components/luxury/luxury.component';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -58,9 +60,10 @@ import { MainChatComponent } from './chat/main_chat.component';
     BrowserModule,
     AppRoutingModule,
     TodoModule,
-    RouterSampleRoutingModule
+    RouterSampleRoutingModule,
+    LuxuryModule
   ],
-  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }, LoginGuards, UnsavedChangesGuards, MainChatComponent, HomeChatComponent, ChatPageComponent],
+  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }, LoginGuards, UnsavedChangesGuards, MainChatComponent, HomeChatComponent, ChatPageComponent, LuxuryComponent],
   bootstrap: [AppComponent]
 })
 
