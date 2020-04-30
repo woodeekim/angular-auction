@@ -5,19 +5,11 @@
     <div class="col-md-3">
       <app-search></app-search>
     </div>
+
     <div class="col-md-9">
-      <div class="row carousel-holder">
-        <div class="col-md-12">
-          <app-carousel></app-carousel>
-        </div>
-      </div>
-      <div class="row">
-        <div *ngFor="let prod of products" class="col-sm-4 col-lg-4 col-md-4">
-          <app-product-item [product]="prod"></app-product-item>
-        </div>
-      </div>
+      <!--기존 application.component에 여러 컴포넌트를 바로 불러왔는데 라우터를 사용하는 방식으로 리팩토링-->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
-
 <app-footer></app-footer>

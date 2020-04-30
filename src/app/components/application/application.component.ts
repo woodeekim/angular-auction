@@ -12,12 +12,8 @@ import { Product, ProductService} from '../../services/product.service';
   encapsulation: ViewEncapsulation.None
 })
 export class ApplicationComponent implements OnInit {
-  products: Array<Product> = [];
-
-  constructor(private productService: ProductService) {
-    this.products = this.productService.getProducts();
+  constructor() {
   }
-
   ngOnInit(): void {
   }
 
