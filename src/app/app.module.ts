@@ -17,7 +17,6 @@ import { HomeComponent } from './components/home/home.component';
 import { DiApplicationComponent } from './di-example/di-application/di-application.component';
 import { DiProductComponent } from './di-example/di-product/di-product.component';
 import { DiMockProductComponent } from './di-example/di-mock-product/di-mock-product.component';
-import {DiProductService, MockProductService} from './di-example/di-services/di-product.service';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -43,8 +42,8 @@ import {DiProductService, MockProductService} from './di-example/di-services/di-
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }, {provide: DiProductService, useClass: MockProductService}],
-  bootstrap: [DiApplicationComponent]
+  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
+  bootstrap: [ApplicationComponent]
 })
 
 export class AppModule { }
