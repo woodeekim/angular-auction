@@ -14,6 +14,10 @@ import { ProductService } from  './services/product.service';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HomeComponent } from './components/home/home.component';
+import { DiApplicationComponent } from './di-example/di-application/di-application.component';
+import { DiProductComponent } from './di-example/di-product/di-product.component';
+import { DiMockProductComponent } from './di-example/di-mock-product/di-mock-product.component';
+import {DiProductService, MockProductService} from './di-example/di-services/di-product.service';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -30,14 +34,17 @@ import { HomeComponent } from './components/home/home.component';
     SearchComponent,
     StarsComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    DiApplicationComponent,
+    DiProductComponent,
+    DiMockProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [ApplicationComponent]
+  providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }, {provide: DiProductService, useClass: MockProductService}],
+  bootstrap: [DiApplicationComponent]
 })
 
 export class AppModule { }
