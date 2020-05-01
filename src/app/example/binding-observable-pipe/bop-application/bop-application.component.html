@@ -21,5 +21,13 @@
     <input type="text" placeholder="Enter stock symbol" [(ngModel)]="lastStockSymbol">
     <br>The value of lastStocksymbol is {{ lastStockSymbol }}
   </li>
+  <li>
+    <h3>옵저버블 이벤트 스트림</h3>
+    <input #mySearchFiled (keyup)="onKey(mySearchFiled.value)">
+    <h3>옵저버블 이벤트 스트림 - debounceTime()</h3>
+    <input type="text" placeholder="Enter stock" [formControl]="searchInput">
+    <app-observable-evenet-http></app-observable-evenet-http>
+  </li>
+
 </ul>
 <br>

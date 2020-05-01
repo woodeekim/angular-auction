@@ -18,7 +18,8 @@ import { DiApplicationComponent } from './example/dependency/di-application/di-a
 import { DiProductComponent } from './example/dependency/di-product/di-product.component';
 import { DiMockProductComponent } from './example/dependency/di-mock-product/di-mock-product.component';
 import { BopApplicationComponent } from './example/binding-observable-pipe/bop-application/bop-application.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ObservableEvenetHttpComponent } from './example/binding-observable-pipe/bop-application/observable-evenet-http/observable-evenet-http.component';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -40,11 +41,13 @@ import {FormsModule} from '@angular/forms';
     DiProductComponent,
     DiMockProductComponent,
     BopApplicationComponent,
+    ObservableEvenetHttpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [BopApplicationComponent]
