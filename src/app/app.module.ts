@@ -14,9 +14,11 @@ import { ProductService } from  './services/product.service';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HomeComponent } from './components/home/home.component';
-import { DiApplicationComponent } from './di-example/di-application/di-application.component';
-import { DiProductComponent } from './di-example/di-product/di-product.component';
-import { DiMockProductComponent } from './di-example/di-mock-product/di-mock-product.component';
+import { DiApplicationComponent } from './example/dependency/di-application/di-application.component';
+import { DiProductComponent } from './example/dependency/di-product/di-product.component';
+import { DiMockProductComponent } from './example/dependency/di-mock-product/di-mock-product.component';
+import { BopApplicationComponent } from './example/binding-observable-pipe/bop-application/bop-application.component';
+import {FormsModule} from '@angular/forms';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -37,13 +39,15 @@ import { DiMockProductComponent } from './di-example/di-mock-product/di-mock-pro
     DiApplicationComponent,
     DiProductComponent,
     DiMockProductComponent,
+    BopApplicationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [ApplicationComponent]
+  bootstrap: [BopApplicationComponent]
 })
 
 export class AppModule { }

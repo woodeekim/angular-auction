@@ -1,0 +1,25 @@
+<ul>
+  <li>
+    <h3>프로퍼티 바인딩 vs 어트리뷰트 바인딩</h3>
+    <input [value]="greeting" [attr.value]="greeting" (input)="onInputEvent($event)">
+  </li>
+  <li>
+    <h3>템플릿 바인딩</h3>
+    <button (click)="flag=!flag">Toggle</button>
+    <div>
+      flag`s value : {{ flag }}
+    </div>
+    <div>
+      1.span with *ngif="flag" : <span *ngIf="flag">Flag is true</span>
+    </div>
+    <div>
+      2.template with [ngIf]="falg" : <ng-template [ngIf]="flag">flag is true</ng-template>
+    </div>
+  </li>
+  <li>
+    <h3>양방향 바인딩</h3>
+    <input type="text" placeholder="Enter stock symbol" [(ngModel)]="lastStockSymbol">
+    <br>The value of lastStocksymbol is {{ lastStockSymbol }}
+  </li>
+</ul>
+<br>
