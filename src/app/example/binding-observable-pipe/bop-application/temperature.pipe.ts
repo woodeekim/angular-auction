@@ -10,6 +10,6 @@ export class TemperaturePipe implements PipeTransform{
     }
     return (fromTo === 'FtoC') ?
       (value - 32) * 5.0 / 9.0 :  // F to C
-      value * 9.0 / 5.0 + 32;  // C to F
+      (value * 9.0) / 5.0 + 32;  // C to F
   }
 }

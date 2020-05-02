@@ -22,6 +22,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ObservableEvenetHttpComponent } from './example/binding-observable-pipe/bop-application/observable-evenet-http/observable-evenet-http.component';
 import { CustomPipeComponent } from './example/binding-observable-pipe/bop-application/custom-pipe/custom-pipe.component';
 import {TemperaturePipe} from './example/binding-observable-pipe/bop-application/temperature.pipe';
+import { FilterPipe } from './components/pipes/filter.pipe';
 
 
 /*
@@ -46,7 +47,8 @@ import {TemperaturePipe} from './example/binding-observable-pipe/bop-application
     BopApplicationComponent,
     ObservableEvenetHttpComponent,
     CustomPipeComponent,
-    TemperaturePipe
+    TemperaturePipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,7 @@ import {TemperaturePipe} from './example/binding-observable-pipe/bop-application
     ReactiveFormsModule,
   ],
   providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [BopApplicationComponent]
+  bootstrap: [ApplicationComponent]
 })
 
 export class AppModule { }
