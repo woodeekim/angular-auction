@@ -3,7 +3,6 @@ import { FormControl } from '@angular/forms';
 import {debounceTime, switchMap} from 'rxjs/operators';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs';
-
 @Component({
   selector: 'app-observable-evenet-http',
   templateUrl: './observable-evenet-http.component.html',

@@ -26,8 +26,9 @@
     <input #mySearchFiled (keyup)="onKey(mySearchFiled.value)">
     <h3>옵저버블 이벤트 스트림 - debounceTime()</h3>
     <input type="text" placeholder="Enter stock" [formControl]="searchInput">
-    <app-observable-evenet-http></app-observable-evenet-http>
   </li>
-
+  <li>
+    <app-custom-pipe></app-custom-pipe>
+  </li>
 </ul>
 <br>

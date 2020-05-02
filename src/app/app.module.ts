@@ -20,6 +20,9 @@ import { DiMockProductComponent } from './example/dependency/di-mock-product/di-
 import { BopApplicationComponent } from './example/binding-observable-pipe/bop-application/bop-application.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ObservableEvenetHttpComponent } from './example/binding-observable-pipe/bop-application/observable-evenet-http/observable-evenet-http.component';
+import { CustomPipeComponent } from './example/binding-observable-pipe/bop-application/custom-pipe/custom-pipe.component';
+import {TemperaturePipe} from './example/binding-observable-pipe/bop-application/temperature.pipe';
+
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -42,6 +45,8 @@ import { ObservableEvenetHttpComponent } from './example/binding-observable-pipe
     DiMockProductComponent,
     BopApplicationComponent,
     ObservableEvenetHttpComponent,
+    CustomPipeComponent,
+    TemperaturePipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,4 @@
+<h3>커스텀 파이프 - 온도 변환</h3>
+<input type="text" value="0" placeholder="Enter temperature" [(ngModel)]="temp" >
+<button (click)="toggleFormat()" >변환 버튼</button>
+<br> {{ targetFormat }} 온도는 {{ temp | temperature : format | number: '1.1-2'}}
