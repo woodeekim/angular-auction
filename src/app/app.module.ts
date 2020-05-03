@@ -23,7 +23,18 @@ import { ObservableEvenetHttpComponent } from './example/binding-observable-pipe
 import { CustomPipeComponent } from './example/binding-observable-pipe/bop-application/custom-pipe/custom-pipe.component';
 import {TemperaturePipe} from './example/binding-observable-pipe/bop-application/temperature.pipe';
 import { FilterPipe } from './components/pipes/filter.pipe';
-
+import { ComponentAppComponent } from './example/componenet-communication/component-app/component-app.component';
+import { InputPropertyBindingComponent } from './example/componenet-communication/component-app/io-property/input-property-binding';
+import {InputPropertyBindingGetterSetterComponent} from './example/componenet-communication/component-app/io-property/input-property-binding-getter-setter';
+import {PriceQuoterComponent} from './example/componenet-communication/component-app/io-property/output-property-binding';
+import { MediatorAppComponent } from './example/componenet-communication/component-app/mediator/mediator-app/mediator-app.component';
+import { PriceQuoterSecondComponent } from './example/componenet-communication/component-app/mediator/mediator-app/components/price-quoter.component';
+import { OrderComponent } from './example/componenet-communication/component-app/mediator/mediator-app/components/order.component';
+import { ProjectionAppComponent } from './example/componenet-communication/component-app/projection/projection-app/projection-app.component';
+import { FirstProjectionChildComponent } from './example/componenet-communication/component-app/projection/projection-app/firstProjection/firstProjectionChild';
+import { FirstProjectionParentComponent } from './example/componenet-communication/component-app/projection/projection-app/firstProjection/firstProjectionParent';
+import { SecondProjectionChildComponent} from './example/componenet-communication/component-app/projection/projection-app/secondProjection/secondProjectionChild';
+import { SecondProjectionParentComponent } from './example/componenet-communication/component-app/projection/projection-app/secondProjection/secondProjectionParent';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -48,7 +59,19 @@ import { FilterPipe } from './components/pipes/filter.pipe';
     ObservableEvenetHttpComponent,
     CustomPipeComponent,
     TemperaturePipe,
-    FilterPipe
+    FilterPipe,
+    ComponentAppComponent,
+    InputPropertyBindingComponent,
+    InputPropertyBindingGetterSetterComponent,
+    PriceQuoterComponent,
+    MediatorAppComponent,
+    PriceQuoterSecondComponent,
+    OrderComponent,
+    ProjectionAppComponent,
+    FirstProjectionParentComponent,
+    FirstProjectionChildComponent,
+    SecondProjectionChildComponent,
+    SecondProjectionParentComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +80,7 @@ import { FilterPipe } from './components/pipes/filter.pipe';
     ReactiveFormsModule,
   ],
   providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [ApplicationComponent]
+  bootstrap: [ComponentAppComponent]
 })
 
 export class AppModule { }

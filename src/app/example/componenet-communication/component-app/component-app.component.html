@@ -1,0 +1,37 @@
+<h2>
+  컴포넌트 통신
+</h2>
+<ul>
+  <li>
+    <h3>입력 프로퍼티 </h3>
+    <input type="text" placeholder="Enter stock" (input)="onInputEvent($event)" >
+    <p>
+    <app-input-property-binding [stockSymbol]="stock" quantity="100"></app-input-property-binding>
+    </p>
+  </li>
+   <li>
+    <h3>입력 프로퍼티 - getter, setter</h3>
+    <input type="text" placeholder="Enter stock" (input)="onInputEvent($event)" >
+    <p>
+    <app-input-property-getter-setter-binding [stockSymbol]="stock"></app-input-property-getter-setter-binding>
+    </p>
+  </li>
+  <li>
+    <h3>출력 프로퍼티</h3>
+    <app-output-property-binding (lastPrice)="priceQuoteHandler($event)"></app-output-property-binding>
+    <br>
+    <p>
+      App.component reeived : <strong> stockSymbol : {{ stockSymbol }}   {{ price | currency: 'USC ': true:'1.2-2'}}</strong>
+    </p>
+  </li>
+  <li>
+    <h3>중개장 패턴</h3>
+    <app-mediator-app></app-mediator-app>
+  </li>
+  <li>
+    <h3>프로젝션</h3>
+    <app-projection-app></app-projection-app>
+  </li>
+
+
+</ul>
