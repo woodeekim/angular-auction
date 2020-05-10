@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {enableProdMode, NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,10 +35,14 @@ import { FirstProjectionChildComponent } from './example/componenet-communicatio
 import { FirstProjectionParentComponent } from './example/componenet-communication/component-app/projection/projection-app/firstProjection/firstProjectionParent';
 import { SecondProjectionChildComponent} from './example/componenet-communication/component-app/projection/projection-app/secondProjection/secondProjectionChild';
 import { SecondProjectionParentComponent } from './example/componenet-communication/component-app/projection/projection-app/secondProjection/secondProjectionParent';
+import { LifecycleParentComponent } from './example/componenet-communication/component-app/lifecycle/lifecycle-parent';
+import { LifecycleChildComponent } from './example/componenet-communication/component-app/lifecycle/lifecycle-child';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
 */
+
+// 운영 모드를 활성화하려면 bootstrap() 함수를 실행하기 전에 enableProdMode(); 함수를 실행하면 된다.;
 
 @NgModule({
   declarations: [
@@ -71,7 +75,9 @@ import { SecondProjectionParentComponent } from './example/componenet-communicat
     FirstProjectionParentComponent,
     FirstProjectionChildComponent,
     SecondProjectionChildComponent,
-    SecondProjectionParentComponent
+    SecondProjectionParentComponent,
+    LifecycleParentComponent,
+    LifecycleChildComponent
   ],
   imports: [
     BrowserModule,

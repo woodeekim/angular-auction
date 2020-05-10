@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, enableProdMode } from '@angular/core';
 import {IPriceQuote} from './io-property/output-property-binding';
 
 @Component({
@@ -25,3 +25,4 @@ export class ComponentAppComponent implements OnInit {
     this.price = event.lastPrice;
   }
 }
+
