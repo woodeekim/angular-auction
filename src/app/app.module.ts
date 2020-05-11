@@ -37,7 +37,8 @@ import { SecondProjectionChildComponent} from './example/componenet-communicatio
 import { SecondProjectionParentComponent } from './example/componenet-communication/component-app/projection/projection-app/secondProjection/secondProjectionParent';
 import { LifecycleParentComponent } from './example/componenet-communication/component-app/lifecycle/lifecycle-parent';
 import { LifecycleChildComponent } from './example/componenet-communication/component-app/lifecycle/lifecycle-child';
-
+import { ExposingParentComponent } from './example/componenet-communication/component-app/exposing-child-api/exposing-parent';
+import { ExposingChildComponent } from './example/componenet-communication/component-app/exposing-child-api/exposing-child-api';
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
 */
@@ -77,7 +78,9 @@ import { LifecycleChildComponent } from './example/componenet-communication/comp
     SecondProjectionChildComponent,
     SecondProjectionParentComponent,
     LifecycleParentComponent,
-    LifecycleChildComponent
+    LifecycleChildComponent,
+    ExposingParentComponent,
+    ExposingChildComponent
   ],
   imports: [
     BrowserModule,
