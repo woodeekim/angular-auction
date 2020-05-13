@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 /*
 * - 자바에서는 class 안에 변수들을 멤버 필드라고 했지만 여기서는 프로퍼티라고 부른다.
@@ -12,15 +12,37 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./stars.component.scss']
 })
 export class StarsComponent implements OnInit {
-  @Input() count = 5;
-  @Input() rating = 0;
-  stars: boolean[] = [];
-  constructor() { }
 
-  ngOnInit(): void {
-    for (let i = 1; i <= this.count; i++){
-      this.stars.push(i > this.rating);
+  // tslint:disable-next-line:variable-name
+  private _rating: number;
+  public stars: boolean[];
+
+  private maxStars = 5;
+
+  @Input()
+  readonly: boolean = true;
+
+  @Input()
+  get rating() {
+    return this._rating;
+  }
+
+  set rating(value: number) {
+    this._rating = value || 0;
+    this.stars = Array(this.maxStars).fill(true, 0, this.rating);
+  }
+
+  @Output()
+  ratingChange: EventEmitter<number> = new EventEmitter();
+
+  fillStarsWithColor(index) {
+    if (!this.readonly) {
+      this.rating = index + 1;
+      this.ratingChange.emit(this.rating);
     }
   }
+
+  ngOnInit(): void {
+    }
 
 }

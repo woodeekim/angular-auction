@@ -89,7 +89,7 @@ import { ExposingChildComponent } from './example/componenet-communication/compo
     ReactiveFormsModule,
   ],
   providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [ComponentAppComponent]
+  bootstrap: [ApplicationComponent]
 })
 
 export class AppModule { }
