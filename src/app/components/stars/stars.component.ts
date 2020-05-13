@@ -20,7 +20,7 @@ export class StarsComponent implements OnInit {
   private maxStars = 5;
 
   @Input()
-  readonly: boolean = true;
+  readonly = true;
 
   @Input()
   get rating() {

@@ -39,6 +39,7 @@ import { LifecycleParentComponent } from './example/componenet-communication/com
 import { LifecycleChildComponent } from './example/componenet-communication/component-app/lifecycle/lifecycle-child';
 import { ExposingParentComponent } from './example/componenet-communication/component-app/exposing-child-api/exposing-parent';
 import { ExposingChildComponent } from './example/componenet-communication/component-app/exposing-child-api/exposing-child-api';
+
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
 */

@@ -14,9 +14,8 @@ ng servee
 ng generate module todo
 
 # Component 생성 (angular CLI 플러그인을 이용해도 좋다.)
-- ng generate component todo/todos --module todo/todo.module.ts --export 
-￿￿￿￿￿- ng generate component todo --inlineTemplate --inlineStyle
-
+- ng generate component todo/todos --module todo/todo.module.ts --export
+- ng generate component todo --inlineTemplate --inlineStyle
 ```
 메모
 - declation 에는 템플릿에서 사용 할 수 있는 걸 선언한다.

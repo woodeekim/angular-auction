@@ -10,6 +10,7 @@ export class Product {
   }
 }
 
+// Review 클래스는 6개의 인자를 받을 수 있게 파라미터 설정
 export class Review {
   constructor(public id: number,
               public productId: number,
