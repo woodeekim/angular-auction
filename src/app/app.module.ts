@@ -39,6 +39,11 @@ import { LifecycleParentComponent } from './example/componenet-communication/com
 import { LifecycleChildComponent } from './example/componenet-communication/component-app/lifecycle/lifecycle-child';
 import { ExposingParentComponent } from './example/componenet-communication/component-app/exposing-child-api/exposing-parent';
 import { ExposingChildComponent } from './example/componenet-communication/component-app/exposing-child-api/exposing-child-api';
+import { FormAppComponent } from './example/form/form-app';
+import { TemplateDrivenComponent } from './example/form/template/template-driven';
+import { ReactiveDrivenComponent } from './example/form/reactive/reactive-driven';
+import { FormArrayNamesComponent } from './example/form/reactive/form-array-names';
+import { ReactiveFormComponent } from './example/form/reactive/reactive-form';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -81,7 +86,12 @@ import { ExposingChildComponent } from './example/componenet-communication/compo
     LifecycleParentComponent,
     LifecycleChildComponent,
     ExposingParentComponent,
-    ExposingChildComponent
+    ExposingChildComponent,
+    TemplateDrivenComponent,
+    FormAppComponent,
+    ReactiveDrivenComponent,
+    FormArrayNamesComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +100,7 @@ import { ExposingChildComponent } from './example/componenet-communication/compo
     ReactiveFormsModule,
   ],
   providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [ApplicationComponent]
+  bootstrap: [FormAppComponent]
 })
 
 export class AppModule { }
