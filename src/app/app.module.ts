@@ -44,6 +44,7 @@ import { TemplateDrivenComponent } from './example/form/template/template-driven
 import { ReactiveDrivenComponent } from './example/form/reactive/reactive-driven';
 import { FormArrayNamesComponent } from './example/form/reactive/form-array-names';
 import { ReactiveFormComponent } from './example/form/reactive/reactive-form';
+import { GrowableItemsFormComponent } from './example/form/reactive/growable-items-form';
 
 /*
 * bootstrap: AppComponent -> ApplicationComponent 변경
@@ -91,7 +92,8 @@ import { ReactiveFormComponent } from './example/form/reactive/reactive-form';
     FormAppComponent,
     ReactiveDrivenComponent,
     FormArrayNamesComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    GrowableItemsFormComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +102,7 @@ import { ReactiveFormComponent } from './example/form/reactive/reactive-form';
     ReactiveFormsModule,
   ],
   providers: [ProductService, {provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [FormAppComponent]
+  bootstrap: [ApplicationComponent]
 })
 
 export class AppModule { }

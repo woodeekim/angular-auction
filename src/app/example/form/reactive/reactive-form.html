@@ -1,0 +1,107 @@
+<ul>
+  <li>
+    <label>
+      Name:
+      <input type="text" [formControl]="name">
+    </label>
+    <p>
+      Value: {{ name.value}}
+    </p>
+    <p>
+      <button (click)="updateName()">update</button>
+    </p>
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label>
+          First Name:
+          <input type="text" formControlName="firstName">
+        </label>
+      </div>
+      <div>
+        <label>
+          Last Name:
+          <input type="text" formControlName="lastName">
+        </label>
+      </div>
+      <div formGroupName="address">
+        <h3>Address</h3>
+        <div>
+          <p>
+            <label>
+              Street:
+              <input type="text" formControlName="street">
+            </label>
+          </p>
+        </div>
+        <div>
+          <p>
+            <label>
+              City:
+              <input type="text" formControlName="city">
+            </label>
+          </p>
+        </div>
+        <div>
+          <p>
+            <label>
+              State:
+              <input type="text" formControlName="state">
+            </label>
+          </p>
+        </div>
+        <div>
+          <p>
+            <label>
+              Zip:
+              <input type="text" formControlName="zip">
+            </label>
+          </p>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!profileForm.valid">submit</button>
+    </form>
+  </li>
+
+  <li>
+    <h2>builderForm 과 Validators 이용한 form</h2>
+    <div>
+      <form [formGroup]="profileFormBuilder" (ngSubmit)="onSubmit()">
+        <p>
+          firstName: <input type="text" formControlName="firstName" required>
+        </p>
+        <p>
+          lastName: <input type="text" formControlName="lastName">
+        </p>
+        <div formGroupName="address">
+          <h3>Address</h3>
+          <p>
+            <label>
+            street: <input type="text" formControlName="street">
+            </label>
+          </p>
+          <p>
+            <label>
+            city: <input type="text" formControlName="city">
+            </label>
+          </p>
+          <p>
+            <label>
+            state: <input type="text" formControlName="state">
+            </label>
+          </p>
+          <p>
+            <label>
+            zip: <input type="text" formControlName="zip">
+            </label>
+          </p>
+          <button>submit</button>
+        </div>
+      </form>
+    </div>
+    <p>
+      Form status : {{ profileFormBuilder.status }}
+    </p>
+  </li>
+
+</ul>

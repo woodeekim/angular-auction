@@ -31,7 +31,7 @@ export class FormArrayNamesComponent{
 
   // Angular 공식 가이드를 보고 폼 컨트롤을 직접 생성하는 방식과 폼 빌더를 사용하는 방식의 차이를 보니
   // 폼 빌더를 사용하면 코드의 양이 효율적으로 줄어든다.
-  profileForm = this.fb.group({
+  profileFormFirst = this.fb.group({
     firstName: [''],
     lastName: [''],
     address: this.fb.group({
@@ -46,7 +46,7 @@ export class FormArrayNamesComponent{
   });
 
   get aliases() {
-    return this.profileForm.get('aliases') as FormArray;
+    return this.profileFormFirst.get('aliases') as FormArray;
   }
 
   addAlias() {

@@ -27,6 +27,10 @@ export class Review {
 */
 @Injectable()
 export class ProductService {
+  getAllCategories(): string[] {
+    return ['Books', 'Electronics', 'Hardware'];
+  }
+
   getProducts(): Product[] {
     return products.map(p => new Product(p.id, p.title, p.price, p.rating, p.description, p.categories));
   }
