@@ -10,7 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductItemComponent} from './components/product-item/product-item.component';
 import { SearchComponent} from './components/search/search.component';
 import { StarsComponent } from './components/stars/stars.component';
-import { ProductService } from  './services/product.service';
+import { ProductService } from './services/product.service';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HomeComponent } from './components/home/home.component';
